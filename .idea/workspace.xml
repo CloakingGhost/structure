@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f3795ce-7cdb-4278-9a54-59d9f638ef59" name="Changes" comment="review queue stack" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="structure" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2LYBA0LHtST09YuHcwYcqhepBut" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BJ1655.executor": "Run",
+    "Application.BJ9934.executor": "Debug",
+    "Application.Main.executor": "Run",
+    "Application.encryption.Main.executor": "Run",
+    "Gradle.structure [:BJ1920.main()].executor": "Run",
+    "Gradle.structure [:BJ9934.main()].executor": "Run",
+    "Gradle.structure [:BJ_2164.main()].executor": "Run",
+    "Gradle.structure [:InsertionSort.main()].executor": "Run",
+    "Gradle.structure [:MergeSort.main()].executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "list.IList",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/project/structure",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\structure\src\main\java\sort" />
+      <recent name="D:\LJH\structure\src\test\java\list" />
+      <recent name="D:\LJH\structure\src\main\java\list" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="list.IList" />
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="list" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="stack" />
+      <recent name="list" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.encryption.Main">
+    <configuration name="BJ1655" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="heap.BJ1655" />
+      <module name="structure.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="heap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BJ9934" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tree.binarytree.BJ9934" />
+      <module name="structure.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tree.binarytree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="heap.Main" />
+      <module name="structure.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="heap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sort.mergesort.MergeSort" />
+      <module name="structure.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort.mergesort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="encryption.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="encryption.Main" />
+      <module name="structure.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="encryption.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.encryption.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BJ1655" />
+        <item itemvalue="Application.BJ9934" />
+        <item itemvalue="Application.MergeSort" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-f644763e9732-4a89cc43" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f3795ce-7cdb-4278-9a54-59d9f638ef59" name="Changes" comment="" />
+      <created>1676037991879</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676037991879</updated>
+      <workItem from="1676037993216" duration="318000" />
+      <workItem from="1676038321985" duration="3000" />
+      <workItem from="1676105763309" duration="10257000" />
+      <workItem from="1676168004253" duration="25091000" />
+      <workItem from="1676209217562" duration="35000" />
+      <workItem from="1676209265065" duration="2935000" />
+      <workItem from="1676268486028" duration="13953000" />
+      <workItem from="1676342733455" duration="5634000" />
+      <workItem from="1676351864258" duration="1803000" />
+      <workItem from="1676353998452" duration="15792000" />
+      <workItem from="1676423916605" duration="15440000" />
+      <workItem from="1676513580972" duration="13405000" />
+      <workItem from="1676594516656" duration="14815000" />
+      <workItem from="1678153090010" duration="16000" />
+      <workItem from="1678433655031" duration="11000" />
+      <workItem from="1678682056574" duration="21000" />
+      <workItem from="1679178846160" duration="42000" />
+      <workItem from="1714269246856" duration="21138000" />
+      <workItem from="1714354562215" duration="11257000" />
+      <workItem from="1714370865348" duration="154000" />
+      <workItem from="1714371055595" duration="2974000" />
+      <workItem from="1714631313578" duration="13864000" />
+      <workItem from="1714957588934" duration="111000" />
+      <workItem from="1714957740173" duration="4384000" />
+    </task>
+    <task id="LOCAL-00001" summary="Stack">
+      <created>1676284494272</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676284494272</updated>
+    </task>
+    <task id="LOCAL-00002" summary="review queue stack">
+      <created>1676624308831</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676624308832</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Stack" />
+    <MESSAGE value="review queue stack" />
+    <option name="LAST_COMMIT_MESSAGE" value="review queue stack" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sort/insertionsort/InsertionSort.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" log-stack="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sort/mergesort/MergeSort.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/heap/Main.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/heap/BJ1655.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/structure$MyArrayListTest.ic" NAME="MyArrayListTest Coverage Results" MODIFIED="1676120263935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
