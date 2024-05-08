@@ -7,38 +7,38 @@ public class MergeSort implements ISort {
         new MergeSort().sort(new int[]{8, 7, 6, 5, 4, 3, 2, 1});
     }
 
-    //¿øº»¹è¿­À» ±×´ë·Î µé°í°¡°í
-    //ÀÎµ¦½º¸¦ ¼¼ºÎÀûÀ¸·Î ÂÉ°³¾î
-    //ÀÎµ¦½º¿¡ ÀÖ´Â ¿ø¼Ò¸¦ Å©±âºñ±³ÇÏ´Â °Í
+    //ì›ë³¸ë°°ì—´ì„ ê·¸ëŒ€ë¡œ ë“¤ê³ ê°€ê³ 
+    //ì¸ë±ìŠ¤ë¥¼ ì„¸ë¶€ì ìœ¼ë¡œ ìª¼ê°œì–´
+    //ì¸ë±ìŠ¤ì— ìˆëŠ” ì›ì†Œë¥¼ í¬ê¸°ë¹„êµí•˜ëŠ” ê²ƒ
 
-    //in-place sort (out-of-place µµ °¡´É)
-    // ÀÎÇÃ·¹ÀÌ½º°¡ ³­ÀÌµµ ´õ ³ôÀ½
+    //in-place sort (out-of-place ë„ ê°€ëŠ¥)
+    // ì¸í”Œë ˆì´ìŠ¤ê°€ ë‚œì´ë„ ë” ë†’ìŒ
     @Override
     public void sort(int[] arr) {
-        mergeSort(arr, 0, arr.length - 1);// ºĞÇÒ ½ÃÀÛ
+        mergeSort(arr, 0, arr.length - 1);// ë¶„í•  ì‹œì‘
     }
 
-    //ºĞÇÒ
+    //ë¶„í• 
     private void mergeSort(int[] arr, int low, int high) {
-        if (low >= high) {// Áß°£°ªÀ» ³Ñ¾î°¡Áö ¾ÊÀ» ¶§±îÁö, ¹è¿­ÀÇ ±æÀÌ°¡ 1µÇ´Â ¼ø°£ÀÓ
+        if (low >= high) {// ì¤‘ê°„ê°’ì„ ë„˜ì–´ê°€ì§€ ì•Šì„ ë•Œê¹Œì§€, ë°°ì—´ì˜ ê¸¸ì´ê°€ 1ë˜ëŠ” ìˆœê°„ì„
             return;
         }
-        int mid = low + ((high - low) / 2);// Àı¹İ¾¿ ºĞÇÒ, Áß°£°ª
-        mergeSort(arr, low, mid); // ¿ŞÂÊºÎÅÍ ¹è¿­ÀÇ ±æÀÌ°¡ 1ÀÌ µÉ¶§±îÁö ºĞÇÒ
-        mergeSort(arr, mid + 1, high);// ±×´ÙÀ½ ¿À¸¥ÂÊ ¹è¿­ÀÇ ±æÀÌ°¡ 1ÀÌ µÉ¶§±îÁö ºĞÇÒ
+        int mid = low + ((high - low) / 2);// ì ˆë°˜ì”© ë¶„í• , ì¤‘ê°„ê°’
+        mergeSort(arr, low, mid); // ì™¼ìª½ë¶€í„° ë°°ì—´ì˜ ê¸¸ì´ê°€ 1ì´ ë ë•Œê¹Œì§€ ë¶„í• 
+        mergeSort(arr, mid + 1, high);// ê·¸ë‹¤ìŒ ì˜¤ë¥¸ìª½ ë°°ì—´ì˜ ê¸¸ì´ê°€ 1ì´ ë ë•Œê¹Œì§€ ë¶„í• 
 
-        //ÀÌÁ¦ Å©±â¸¦ ºñ±³ÇÏ¸ç ÇÕº´
+        //ì´ì œ í¬ê¸°ë¥¼ ë¹„êµí•˜ë©° í•©ë³‘
         merge(arr, low, mid, high);
     }
 
-    //ÇÕº´
+    //í•©ë³‘
     private void merge(int[] arr, int low, int mid, int high) {
-        //Á¤·ÄµÈ ¼­ºê¹è¿­¸¦ Á¤·ÄÇÏ¿© ´ãÀ» º¸Á¶¹è¿­
-        int[] temp = new int[high - low + 1];// ÇÕÃÄÁ®¾ßÇÒ ¹è¿­ÀÇ Å©±â¿Í µ¿ÀÏÇÏ±â ¶§¹®
+        //ì •ë ¬ëœ ì„œë¸Œë°°ì—´ë¥¼ ì •ë ¬í•˜ì—¬ ë‹´ì„ ë³´ì¡°ë°°ì—´
+        int[] temp = new int[high - low + 1];// í•©ì³ì ¸ì•¼í•  ë°°ì—´ì˜ í¬ê¸°ì™€ ë™ì¼í•˜ê¸° ë•Œë¬¸
         int idx = 0;
 
-        int left = low;
-        int right = mid + 1;
+        int left = low; // ì™¼ìª½ ë°°ì—´ì˜ ì‹œì‘ ì¸ë±ìŠ¤
+        int right = mid + 1; // ì˜¤ë¥¸ìª½ ë°°ì—´ì˜ ì‹œì‘ ì¸ë±ìŠ¤
         while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 temp[idx] = arr[left];
@@ -49,13 +49,13 @@ public class MergeSort implements ISort {
             }
             idx++;
         }
-        // ¿ŞÂÊ ¸®½ºÆ®ÀÇ °ªÀÌ ³²Àº °æ¿ì
+        // ì™¼ìª½ ë¦¬ìŠ¤íŠ¸ì˜ ê°’ì´ ë‚¨ì€ ê²½ìš°
         while (left <= mid) {
             temp[idx] = arr[left];
             idx++;
             left++;
         }
-        // ¿À¸¥ÂÊ ¸®½ºÆ®ÀÇ °ªÀÌ ³²Àº °æ¿ì
+        // ì˜¤ë¥¸ìª½ ë¦¬ìŠ¤íŠ¸ì˜ ê°’ì´ ë‚¨ì€ ê²½ìš°
         while (right <= high) {
             temp[idx] = arr[right];
             idx++;
@@ -68,11 +68,11 @@ public class MergeSort implements ISort {
     }
 
     void s(int[] arr) {
-        // Á¤·Ä ¹üÀ§
+        // ì •ë ¬ ë²”ìœ„
         ms(arr, 0, arr.length - 1);
     }
 
-    //ºĞÇÒ
+    //ë¶„í• 
     void ms(int[] arr, int low, int high) {
         if (low >= high) {
             return;
@@ -85,12 +85,12 @@ public class MergeSort implements ISort {
         m(arr, low, mid, high);
     }
 
-    //ÇÕº´
+    //í•©ë³‘
     void m(int[] arr, int low, int mid, int high) {
-        //µÑ·Î ÀÎµ¦½º¸¦ Á¤·ÄÇÏ¿© °ªÀ» ¹ŞÀ» º°µµÀÇ ¹è¿­
-        int[] temp = new int[high - low + 1];// »©¸é ¸¶Áö¸·ÀÌ ¾ø¾îÁö´Ï±î + 1 ÇÑ´Ù.
+        //ë‘˜ë¡œ ì¸ë±ìŠ¤ë¥¼ ì •ë ¬í•˜ì—¬ ê°’ì„ ë°›ì„ ë³„ë„ì˜ ë°°ì—´
+        int[] temp = new int[high - low + 1];// ë¹¼ë©´ ë§ˆì§€ë§‰ì´ ì—†ì–´ì§€ë‹ˆê¹Œ + 1 í•œë‹¤.
         int idx = 0;
-        //´ë¼Òºñ±³¸¦ À§ÇØ ¿ŞÂÊÀÎµ¦½º ¿À¸¥ÂÊÀÎµ¦½º »ı¼º
+        //ëŒ€ì†Œë¹„êµë¥¼ ìœ„í•´ ì™¼ìª½ì¸ë±ìŠ¤ ì˜¤ë¥¸ìª½ì¸ë±ìŠ¤ ìƒì„±
         int left = low;
         int right = mid + 1;
 
@@ -104,7 +104,7 @@ public class MergeSort implements ISort {
             }
             idx++;
         }
-        //³ª¸ÓÁö ºñ±³ÇÒ ´ë»óÀÌ ¾ø¾î ³²Àº °ªµéÀº temp ¿¡ ³Ö¾îÁØ´Ù
+        //ë‚˜ë¨¸ì§€ ë¹„êµí•  ëŒ€ìƒì´ ì—†ì–´ ë‚¨ì€ ê°’ë“¤ì€ temp ì— ë„£ì–´ì¤€ë‹¤
         while (left <= mid) {
             temp[idx] = arr[left];
             idx++;

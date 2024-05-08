@@ -8,7 +8,7 @@ public class Main {
         h.insert(2);
         h.insert(5);
         h.insert(4);
-        h.pop();
-
+//        h.pop();
+        System.out.println("h = " + h);
     }
 }

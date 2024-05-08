@@ -6,7 +6,6 @@ public class QuickSort implements ISort {
     @Override
     public void sort(int[] arr) {
         quickSort(arr, 0, arr.length - 1);
-
     }
 
     private void quickSort(int[] arr, int low, int high) {
@@ -30,8 +29,8 @@ public class QuickSort implements ISort {
                 right--;
             }
         }
-        quickSort(arr, low, right); // ¿ŞÂÊ, right ÀÎ ÀÌÀ¯´Â À§ while À» ÅëÇØ ±³Â÷µÇ¾ú±â ¶§¹®
-        quickSort(arr, left, high); // ¿À¸¥ÂÊ
+        quickSort(arr, low, right); // ì™¼ìª½, right ì¸ ì´ìœ ëŠ” ìœ„ while ì„ í†µí•´ êµì°¨ë˜ì—ˆê¸° ë•Œë¬¸
+        quickSort(arr, left, high); // ì˜¤ë¥¸ìª½
     }
 
     private static void swap(int[] arr, int right, int left) {
@@ -44,23 +43,23 @@ public class QuickSort implements ISort {
         qs(arr, 0, arr.length - 1);
     }
 
-    // ¹è¿­ÀÇ ±æÀÌ°¡ 1ÀÌ µÉ¶§ ±îÁö
-    // ÇÇ¹şÀÎµ¦½ºÀ» ±âÁØÀ¸·Î
-    // ÇÇ¹ş°ªº¸´Ù ¿ŞÂÊ °ª Áß Å«°Ô ÀÖÀ¸¸é Á¤Áö
-    // ÇÇ¹şº¸´Ù ¿À¸¥ÂÊ °ª Áß ÀÛÀº°Ô ÀÖÀ¸¸é Á¤Áö
-    // µÎ°ªÀ» ¹Ù²Û´Ù
-    // ¹İº¹, ¾ğÁ¦±îÁö? left <= right  ±³Â÷ÇÏ±â Àü±îÁö
-    // »çÀÌÅ¬ÀÌ ³¡³ª¸é
-    // ÇÇ¹ş Á¦¿Ü ¿ŞÂÊ ¿À¸¥ÂÊ Á¤·Ä ¸Ş¼Òµå È£Ãâ(Àç±Í È£Ãâ)
+    // ë°°ì—´ì˜ ê¸¸ì´ê°€ 1ì´ ë ë•Œ ê¹Œì§€
+    // í”¼ë²—ì¸ë±ìŠ¤ì„ ê¸°ì¤€ìœ¼ë¡œ
+    // í”¼ë²—ê°’ë³´ë‹¤ ì™¼ìª½ ê°’ ì¤‘ í°ê²Œ ìˆìœ¼ë©´ ì •ì§€
+    // í”¼ë²—ë³´ë‹¤ ì˜¤ë¥¸ìª½ ê°’ ì¤‘ ì‘ì€ê²Œ ìˆìœ¼ë©´ ì •ì§€
+    // ë‘ê°’ì„ ë°”ê¾¼ë‹¤
+    // ë°˜ë³µ, ì–¸ì œê¹Œì§€? left <= right  êµì°¨í•˜ê¸° ì „ê¹Œì§€
+    // ì‚¬ì´í´ì´ ëë‚˜ë©´
+    // í”¼ë²— ì œì™¸ ì™¼ìª½ ì˜¤ë¥¸ìª½ ì •ë ¬ ë©”ì†Œë“œ í˜¸ì¶œ(ì¬ê·€ í˜¸ì¶œ)
     //
     private void qs(int[] arr, int low, int high) {
-        if (low >= high) return; // ¹è¿­ÀÇ ±æÀÌ°¡ 1ÀÌµÊ
+        if (low >= high) return; // ë°°ì—´ì˜ ê¸¸ì´ê°€ 1ì´ë¨
 
         int pivot = low + ((high - low) / 2);
         int pivotValue = arr[pivot];
 
-        int left = low; // ÀÎµ¦½º
-        int right = high; // ÀÎµ¦½º
+        int left = low; // ì¸ë±ìŠ¤
+        int right = high; // ì¸ë±ìŠ¤
 
         while (left <= right) { //
             while (arr[left] <= pivotValue) {
@@ -69,8 +68,8 @@ public class QuickSort implements ISort {
             while (arr[right] >= pivotValue) {
                 right--;
             }
-            if (left <= right) {// À§ while ‹š¹®¿¡ ±³Â÷ÇßÀ» ¼öµµ ÀÖ±â¶§¹®¿¡
-                //°ª swap
+            if (left <= right) {// ìœ„ while ë–„ë¬¸ì— êµì°¨í–ˆì„ ìˆ˜ë„ ìˆê¸°ë•Œë¬¸ì—
+                //ê°’ swap
                 int temp = arr[left];
                 arr[left] = arr[right];
                 arr[right] = temp;

@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class MaxHeap<T extends Comparable<T>> implements IHeap<T> {
-    transient String a;
+//    transient String a; // 직렬화에서 제외되는 필드멤버
+
     T[] data; // 배열로 구현하면 부모나 자식 노드의 위치 찾기가 수월함
     int size;
     int maxSize; // 최대 사이즈

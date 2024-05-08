@@ -3,14 +3,14 @@ package sort.bubblesort;
 import sort.ISort;
 
 public class BubbleSort implements ISort {
-    //¾ÈÁ¤Á¤·Ä
-    // ÀÎÇÃ·¹ÀÌ½º Á¤·Ä
-    // arr.length - 1 ÀÌÀ¯´Â ´ÙÀ½°ªÀ» ºñ±³ÇÏ±â ¶§¹®¿¡ ¸¶Áö¸·Àº È®ÀÎ ÇÏÁö ¾Ê¾Æµµ µÊ
-    // ÁøÇàµÇ¸é ¸¶Áö¸· ÀÎµ¦½º¿¡¼­ ¾Æ¿ô¿Àºê ÀÍ¼Á¼Ç ¹ß»ı
+    //ì•ˆì •ì •ë ¬
+    // ì¸í”Œë ˆì´ìŠ¤ ì •ë ¬
+    // arr.length - 1 ì´ìœ ëŠ” ë‹¤ìŒê°’ì„ ë¹„êµí•˜ê¸° ë•Œë¬¸ì— ë§ˆì§€ë§‰ì€ í™•ì¸ í•˜ì§€ ì•Šì•„ë„ ë¨
+    // ì§„í–‰ë˜ë©´ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ì—ì„œ ì•„ì›ƒì˜¤ë¸Œ ìµì…‰ì…˜ ë°œìƒ
     @Override
     public void sort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {// ÀüÃ¼ ¸®½ºÆ®
-            for (int j = 0; j < arr.length - 1 - i; j++) {// Á¤·ÄµÈ ¸®½ºÆ® Á¦¿Ü
+        for (int i = 0; i < arr.length - 1; i++) {// ì „ì²´ ë¦¬ìŠ¤íŠ¸
+            for (int j = 0; j < arr.length - 1 - i; j++) {// ì •ë ¬ëœ ë¦¬ìŠ¤íŠ¸ ì œì™¸
                 if(arr[j] > arr[j + 1]){
                     int temp = arr[j];
                     arr[j] = arr[j + 1];

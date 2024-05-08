@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3795ce-7cdb-4278-9a54-59d9f638ef59" name="Changes" comment="review queue stack" />
+    <list default="true" id="2f3795ce-7cdb-4278-9a54-59d9f638ef59" name="Changes" comment="review queue stack">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heap/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heap/MaxHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heap/MaxHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/binarysearch/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/binarysearch/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/binarysearch/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/binarysearch/document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/bubblesort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/bubblesort/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/bubblesort/document.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/insertionsort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/insertionsort/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/insertionsort/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/insertionsort/document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/mergesort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/mergesort/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/mergesort/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/mergesort/document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/quicksort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/quicksort/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/quicksort/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/quicksort/document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/binarytree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/binarytree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/binarytree/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/binarytree/document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tree/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tree/document.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +85,7 @@
   "keyToString": {
     "Application.BJ1655.executor": "Run",
     "Application.BJ9934.executor": "Debug",
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "Application.encryption.Main.executor": "Run",
     "Gradle.structure [:BJ1920.main()].executor": "Run",
     "Gradle.structure [:BJ9934.main()].executor": "Run",
@@ -111,7 +130,7 @@
       <recent name="list" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.encryption.Main">
+  <component name="RunManager">
     <configuration name="BJ1655" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="heap.BJ1655" />
       <module name="structure.main" />
@@ -226,6 +245,9 @@
       <workItem from="1714631313578" duration="13864000" />
       <workItem from="1714957588934" duration="111000" />
       <workItem from="1714957740173" duration="4384000" />
+      <workItem from="1715006668027" duration="481000" />
+      <workItem from="1715007179977" duration="1437000" />
+      <workItem from="1715172564037" duration="5170000" />
     </task>
     <task id="LOCAL-00001" summary="Stack">
       <created>1676284494272</created>
@@ -266,25 +288,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sort/insertionsort/InsertionSort.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" log-stack="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sort/mergesort/MergeSort.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/heap/Main.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/heap/BJ1655.java</url>
           <line>18</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/heap/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

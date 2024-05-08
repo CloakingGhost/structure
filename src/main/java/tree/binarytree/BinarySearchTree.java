@@ -73,10 +73,10 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
             node.left = deleteNode(node.left, val);
         else if (val.compareTo(node.data) > 0)
             node.right = deleteNode(node.right, val);
-        else{
+        else {
             // val == node.data
             this.size--;
-            if(node.left == null){
+            if (node.left == null) {
                 return node.right;
             } else if (node.right == null) {
                 return node.left;
