@@ -4,7 +4,7 @@ import java.util.*;
 
 public class AdjacencyListGraph implements IGraph {
 
-    private List<List<Node>> graph;// 인덱스는 버텍스의 순서, 해당 버텍스를 가리키고 있는 Node의 번호
+    private List<List<Node>> graph;// 인덱스는 버텍스의 시작점, 시작점이 가리키는 도착점과 가중치를 담은 노드(버텍스) 리스트
     private Set<Integer> vertexes;
     private Map<Integer, Integer> indegrees;
 
@@ -19,14 +19,15 @@ public class AdjacencyListGraph implements IGraph {
 
     @Override
     public void add(int from, int to, Integer distance) {
-        vertexes.add(from);
-        vertexes.add(to);
+        //Set 이므로 중복 제거 됨
+        vertexes.add(from); // 시작점 삽입
+        vertexes.add(to); // 도착점 삽입
 
-        int count = indegrees.getOrDefault(to, 0);
-        indegrees.put(to, count + 1);
+        int count = indegrees.getOrDefault(to, 0);// 도착점의 차수
+        indegrees.put(to, count + 1);// 도착점에 차수에 1 추가
 
-        List<Node> neighbors = this.graph.get(from);
-        neighbors.add(new Node(from, to, distance));
+        List<Node> neighbors = this.graph.get(from);// 시작점의 리스트
+        neighbors.add(new Node(from, to, distance));// 시작점에서 도착점까지 거리(가중치)값 삽입, 중복 허용(만약 방향까지 넣는다면 중복은 막을 수 있을 듯?)
     }
 
     @Override

@@ -26,3 +26,164 @@ vertex(like Node)와 edge(vertex 의 연결관계)로 구성
 그래프 탐색시 BFS, DFS
 위상 정렬
 그래프의 최단거리
+
+====================================
+
+A -- B -- E
+     | \  |
+     C -- D
+     |    | \
+     F    G  H
+
+
+BFS(Breath-First Search)
+- 너비 우선 탐색
+- queue 사용
+- package tree.binarytree.BJ9934 에서 print 메소드 확인
+
+A 방문 큐에 A 넣는다
+while 시작
+for 시작
+큐에서 꺼내어 확인
+A와 연결된 버텍스 B 큐에 삽입
+for 종료
+for 시작
+큐에서 B를 꺼내 확인
+B와 연결된 버텍스 C, D, E 큐 넣는다
+for 종료
+for 시작
+큐에서 C를 꺼내어 확인
+C와 연결된 버텍스 F를 큐에 넣는다
+for 종료
+for 시작
+큐에서 D를 꺼내어 확인
+D와 연결된 G, H 삽입
+for 종료
+...
+E F G H 확인
+
+그렇다면 방문한 버텍스는 어떻게 구별하는가
+Set 자료구조 사용
+
+=====================
+A -- B -- E
+     | \  |
+     C -- D
+     |    | \
+     F    G  H
+
+DFS(Depth-First-Search)
+- 깊이 우선 탐색
+- Preorder, Inorder, Postorder
+- Stack 자료구조 사용
+- 재귀호출로도 사용 가능
+- 가장 멀리 있는 데이터를 확인하는 것이 특징
+
+스텍에 A를 넣는다
+A를 스텍에서 확인
+연결된 B를 스텍에 넣는다
+B를 스텍에서 확인
+C D E 스텍에 넣는다
+E를 확인
+연결된 버텍스가 없으므로 다음 스텍 확인
+D를 스텍에서 확인
+D와 연결된 버텍스 G H 스텍에 삽입
+H 확인
+G 확인
+C 확인
+C와 연결된 F 스텍이 삽입
+F 확인
+
+종료
+
+방문 노드확인은 Set 자료구조 사용
+
+
+BFS: A B C D E F G H
+DFS: A B E D H G C F
+
+A -- B -- E
+     | \  |
+     C -- D
+     |    | \
+     F    G  H
+
+
+====================
+위상정렬(Topological Sorting)
+- 사이클이 없고 방향이 있는 비순환 방향 그래프에서 버텍스들을 순서대로 출력하는 알고리즘
+- 순서가 있는 task(작업)에서 순서를 찾아주는 알고리즘
+- 방향이 꼭 있어야 함
+- Queue (진입 차수: 해당 버텍스로 들어오는 차수(인접한 변))
+- Stack (DFS: 깊이 우선 탐색)
+
+Queue 방식(상대적으로 구현이 간단함)
+- 진입차수(indegree): 한 노드에 들어오는 다른 간선의 수
+1. 모든 vertex 의 indegree 수를 센다
+2. 큐에 indegree 가 0 인 vertex 삽입
+3. 큐에서 vertex 를 꺼내 연결된(나가는 방향) edge 제거
+4. 3번으로 인해 indegree 가 0 이 된 vertex 를 큐에 삽입
+5. 큐가 빌때까지 3~4 반복
+
+* 사이클이 있으면 항상 진입차수가 1 이상 이기 때문에 확인하지 못하고 종료하게 됨(큐에 넣을 수 없음)
+* 시작 지점에 사이클이 있으면 시작도 못함
+
+(진입 차수가 없고 진출차수를 따라 탐색)
+
+   B ⇒ D ⇒ F
+ ⇗       ⇙
+A ⇒ C ⇒ E ⇒ G
+
+큐에 A 삽입
+A 확인(pop)
+out-degree 에 있는 vertex 가 in-degree 가 있는지 확인
+B C 삽입
+out-degree 삭제
+B 확인
+out-degree 에 있는 vertex 가 in-degree 가 있는지 확인
+D 삽입
+out-degree 삭제
+C 확인
+out-degree 에 있는 vertex 가 in-degree 가 있는지 확인
+E 아직 못넣음 D를 확인하러가자
+D 확인
+out-degree 에 있는 vertex 가 in-degree 가 있는지 확인
+F 삽입
+out-degree 삭제
+F 확인
+out-degree 에 있는 vertex 가 in-degree 가 있는지 확인
+E 이제 삽입할 수 있음
+E 삽입
+out-degree 삭제
+E 확인
+out-degree 에 있는 vertex 가 in-degree 가 있는지 확인
+G 삽입
+out-degree 가 없으므로 종료
+
+결과: A B C D F E G
+
+=====================
+Stack(DFS)
+
+   B ⇒ D ⇒ F
+ ⇗       ⇙
+A ⇒ C ⇒ E ⇒ G
+
+탐색 방향을 정해야 함
+B 방향으로 탐색 시 Stack 에는 가장 멀리 있는 G 부터 쌓이게 되어
+(왼쪽이 가장 먼저 담긴 데이터)
+G E F D B
+이렇게 담긴다
+A 는 아직 방문을 완료하지 않는다
+연결되어 있는 노드가 남았기 때문
+따라서 C 를 기준으로 DFS 를 시작하고
+더이상 연결된 노드가 없으면 시작 노드를 담는다
+(왼쪽이 가장 먼저 담긴 데이터)
+G E F D B C A
+
+
+시간복잡도
+- O(|V| + |E|)
+- V: vertex, E: edge
+
+

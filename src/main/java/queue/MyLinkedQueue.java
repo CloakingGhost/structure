@@ -8,7 +8,7 @@ public class MyLinkedQueue<T> implements IQueue<T> {
     private Node tail;
     private int size;
 
-    MyLinkedQueue() {
+    public MyLinkedQueue() {
         this.size = 0;
         this.head = new Node(null);
         this.tail = this.head;
