@@ -85,6 +85,7 @@ public class GraphAlgorithms {
         Map<Integer, Integer> indegreeCounter = graph.getIndegrees();
 
         List<Integer> result = new LinkedList<>();
+//        List<Integer> result = new ArrayList<>();
         // in-degree == 0 인 vertex 담음
         IQueue<Integer> queue = new MyLinkedQueue<>();
 //        Queue<Integer> queue = new LinkedList<>(); // Java 에서 지원하는 Queue
@@ -112,8 +113,8 @@ public class GraphAlgorithms {
                 //그 노드의 진입차수 1 감소
                 if (indegreeCounter.containsKey(n)) {
                     int count = indegreeCounter.get(n); // 진입차수 가져온다
-                    //indegreeCounter 에는 vertex 에 연결된 차수가 있다
-                    //이 수를 감소시켰을 때 진입차수가 0 이면 담는다
+                    //indegreeCounter 에는 vertex 에 연결된 진입차수가 있다
+                    //이 차수를 감소시켰을 때 0 이면 담는다
                     if (count - 1 == 0) {
                         queue.offer(n);
                     }
@@ -127,7 +128,42 @@ public class GraphAlgorithms {
 
         return result;
     }
-    public static List<Integer> topologicalSortStack(IGraph iGraph) {
-        return null;
+
+    public static List<Integer> topologicalSortStack(IGraph graph) {
+        List<Integer> result = new ArrayList<>();
+        IStack<Integer> stack = new MyStack<>();
+        Set<Integer> visited = new HashSet<>();
+
+        Set<Integer> vertexes = graph.getVertexes();
+        for (Integer vertex : vertexes) {
+            if (!visited.contains(vertex)) {
+                //dfs
+                topologicalSort(graph, vertex, visited, stack);
+            }
+        }
+        //출력
+        while (stack.size() > 0) {
+            result.add(stack.pop());
+        }
+        // result 의 개수와 그래프의 vertex 의 개수가 다르면 cycle 존재
+        return result;
+    }
+
+    private static void topologicalSort(IGraph graph, Integer vertex, Set<Integer> visited, IStack<Integer> stack) {
+        // 중복 탐색 방지
+        visited.add(vertex);
+        // 여기서 스텍에 넣으면 안됨
+//        stack.push(vertex);
+
+        //현위치(vertex)와 연결된 노드들
+        List<Integer> nodes = graph.getNodes(vertex);
+        for (Integer n : nodes) {
+            // 방문하지 않았을 경우
+            if (!visited.contains(n)) {
+                topologicalSort(graph, n, visited, stack);
+            }
+        }
+        //역순으로 넣어야 하기 때문에 for 종료 후에 넣는다
+        stack.push(vertex);
     }
 }
