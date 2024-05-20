@@ -74,7 +74,7 @@ public class GraphAlgorithms {
         return result;
     }
 
-//    1. 모든 vertex 의 indegree 수 를 센다
+    //    1. 모든 vertex 의 indegree 수 를 센다
 //    2. 큐에 indegree 가 0 인 vertex 삽입
 //    3. 큐에서 vertex 를 꺼내 연결된(나가는 방향) edge 제거
 //    4. 3번으로 인해 indegree 가 0 이 된 vertex 를 큐에 삽입
@@ -165,5 +165,58 @@ public class GraphAlgorithms {
         }
         //역순으로 넣어야 하기 때문에 for 종료 후에 넣는다
         stack.push(vertex);
+    }
+
+    // parameter: 그래프, 출발노드, 도착노드
+    public static int dijkstraShortestPath(IGraph graph, int src, int dst) {
+        int size = 0;
+        // 배열을 만들기 위해 그래프에서 가장 큰 번호의 노드를 찾는 로직
+        // 상황에 따라 달라질 수 있음
+        for (Integer n : graph.getVertexes()) {
+            if (size < n) {
+                size = n + 1;
+            }
+        }
+
+        // 무한대(INF)로 초기화 할 수 없기때문에 Integer 최대값으로 초기화
+        int[] dist = new int[size];
+        for (int i = 0; i < dist.length; i++) {
+            dist[i] = Integer.MAX_VALUE;
+        }
+        // 시작점 초기화
+        dist[src] = 0;
+
+        //int[] = 0 인덱스: 노드 번호, 1 인덱스: distance(거리값)
+        //<vertex,distance>
+        // distance 를 기준으로 하는 min-heap
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
+            return a[1] - b[1];
+        });
+
+        // 큐에 시작점 삽입
+        pq.add(new int[] {src, 0});
+
+        while (!pq.isEmpty()) {
+            int[] top = pq.poll();
+            int vertex = top[0];
+            int distance = top[1];
+
+            //큐에서 가져온 distance 가 최단거리 배열에 저장되어 있는 distance 보다 크다면
+            //로직을 진행하지 않음, 최단거리 배열이 기준임
+            if (dist[vertex] < distance) {
+                continue;
+            }
+
+            // 큐에서 가져온 노드와 연결된 노드들
+            for (int node : graph.getNodes(vertex)) {
+                // 연결된 노드 업데이트 가능한지 확인
+                if (dist[node] > dist[vertex] + graph.getDistance(vertex, node)) {
+                    // 더 작은 값으로 업데이트
+                    dist[node] = dist[vertex] + graph.getDistance(vertex, node);
+                    pq.add(new int[]{node, dist[node]});// 내부적으로 작은 값이 정렬 됨
+                }
+            }
+        }
+        return dist[dst];
     }
 }
